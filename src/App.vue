@@ -1,7 +1,7 @@
 <template>
   <div id="app">
       <app-nav class="navBar"></app-nav>
-    <transition name="bar">
+    <transition name="bar" mode="out-in">
       <router-view class="content"></router-view>
     </transition>
   </div>
@@ -24,6 +24,9 @@ export default {
 </script>
 
 <style>
+*{
+  box-sizing: border-box;
+}
 body{
   margin: 0;
 }
@@ -34,37 +37,19 @@ body{
   text-align: center;
   color: #2c3e50;
   display: flex;
-  height: 100vh;
 }
 .content{
-  background-color: blue;
+  background-color: #999;
   flex-grow: 1;
 }
 .navBar{
-  background-color: red;
-
+  background-color: #eee
 }
-.bar-enter-active, .bar-leave-active{
-  animation: foo .5s;
+.bar-enter-active, .bar-leave-active {
+  transition: opacity 1s
 }
-.bar-enter, .bar-leave-to{
+.bar-enter, .bar-leave-to {
   opacity: 0;
-  color:#333;
-}
-@keyframes foo {
-
-  0%{
-    opacity: 0;
-    color: #037432;
-  }
-  50%{
-    opacity: .5;
-    color: #123093;
-  }
-  100%{
-    opacity: 1;
-    color: #121212;
-  }
-
+  color: #e34567
 }
 </style>

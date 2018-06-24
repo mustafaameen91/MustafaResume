@@ -1,13 +1,17 @@
-import first from './components/HelloWorld.vue'
-import second from './components/second.vue'
-
+import Home from './components/Home.vue'
+import Projects from './components/Projects.vue'
+import Contact from './components/Contact.vue'
 export default[
   {
     path:'/',
-    component:first
+    component:Home
   },
   {
-    path:'/second',
-    component:second
+    path:'/projects',
+    component:Projects
+  },
+  {
+    path:'/contact',
+    component:Contact
   }
 ]

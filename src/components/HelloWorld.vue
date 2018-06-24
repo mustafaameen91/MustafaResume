@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="page">
     <h3>hellloooo</h3>
   </div>
 </template>
@@ -19,13 +19,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-.foo-enter-active, .foo-leave-active {
-  transition: opacity .5s;
-}
-.foo-enter, .foo-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
+
 </style>
