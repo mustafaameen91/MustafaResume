@@ -1,6 +1,9 @@
 <template>
   <div class="hello">
-    <h3>hellloooo</h3>
+    <transition name="foo">
+      <h1 v-if="show">{{ msg }}</h1>
+    </transition>
+    <button v-on:click="show = !show">first animate</button>
   </div>
 </template>
 
@@ -10,7 +13,7 @@ export default {
 
   data(){
     return{
-    msg:'Welcome to the new version of Vue',
+    msg:'Welcome to Second page',
     show:true
     }
   }
